@@ -24,5 +24,8 @@ namespace Operand_Test
     {
         private It should_subtract_second_operand_from_first_operand = () =>
                                                    new Operator().Subtract(42, 20).ShouldEqual(22m);
+
+        private It should_subtract_all_operands_from_the_first_operand = () =>
+                new Operator().Subtract(10m, 1, 2, 3).ShouldEqual(4m);
     }
 }
