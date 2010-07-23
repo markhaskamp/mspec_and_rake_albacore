@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1.csproj", "{BC5E24A1-6E4D-4083-AD9F-B94BBBF2FDD8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operand", "..\app\Operand\Operand.csproj", "{976E3B69-C118-420B-96FE-01C9DBD3A5C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operand_Test", "..\test\Operand_Test\Operand_Test.csproj", "{FA41399B-2865-440C-8E51-01F80DD6AB16}"
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BC5E24A1-6E4D-4083-AD9F-B94BBBF2FDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC5E24A1-6E4D-4083-AD9F-B94BBBF2FDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC5E24A1-6E4D-4083-AD9F-B94BBBF2FDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC5E24A1-6E4D-4083-AD9F-B94BBBF2FDD8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{976E3B69-C118-420B-96FE-01C9DBD3A5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{976E3B69-C118-420B-96FE-01C9DBD3A5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{976E3B69-C118-420B-96FE-01C9DBD3A5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
