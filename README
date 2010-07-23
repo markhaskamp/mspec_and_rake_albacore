@@ -1,0 +1,5 @@
+Exceedingly simple project that uses mspec, rake, and albacore
+
+to run the test:
+    bld/rake
+

@@ -1,0 +1,17 @@
+require 'rubygems'
+require 'albacore'
+
+task :default => 'test'
+
+desc "Run a sample build using the MSBuildTask"
+
+msbuild :build do |msb|
+        msb.properties :configuration => :Debug
+        msb.targets :Clean, :Build
+        msb.solution = "c:\\a_dev\\mspec_test\\ConsoleApplication1\\ConsoleApplication1.sln"
+end
+
+task :test => [:build] do |t|
+     sh "..\\test\\mspec c:\\a_dev\\mspec_test\\test\\Operand_Test\\bin\\Debug\\Operand_Test.dll"
+end
+
