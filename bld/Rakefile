@@ -1,17 +1,33 @@
 require 'rubygems'
 require 'albacore'
 
+rakefile = __FILE__
+home_dir = "#{rakefile}/../.."
+
+desc "default task = :test"
 task :default => 'test'
 
-desc "Run a sample build using the MSBuildTask"
-
-msbuild :build do |msb|
+desc "Clean, then build using albacore's msbuild task"
+msbuild :build => [:clean] do |msb|
         msb.properties :configuration => :Debug
-        msb.targets :Clean, :Build
-        msb.solution = "c:\\a_dev\\mspec_test\\ConsoleApplication1\\ConsoleApplication1.sln"
+        msb.targets :Build
+        msb.solution = "#{home_dir}/ConsoleApplication1/ConsoleApplication1.sln"
 end
 
+desc "Clean using albacore's msbuild task"
+msbuild :clean do |msb|
+        msb.properties :configuration => :Debug
+        msb.targets :Clean
+        msb.solution = "#{home_dir}/ConsoleApplication1/ConsoleApplication1.sln"
+end
+
+desc "run mspec tests"
 task :test => [:build] do |t|
-     sh "..\\test\\mspec c:\\a_dev\\mspec_test\\test\\Operand_Test\\bin\\Debug\\Operand_Test.dll"
+     sh "../test/mspec #{home_dir}/test/Operand_Test/bin/Debug/Operand_Test.dll"
 end
 
+desc "tell me stuff"
+task :help do
+     puts "rakefile: \t" + File.basename(rakefile)
+     puts "home_dir: \t#{home_dir}"
+end
