@@ -46,4 +46,20 @@ namespace Operand_Test
             Exception.ShouldBeOfType<ArgumentException>();
 
     }
+
+    [Subject("MSpec syntax sample")]
+    public class I_Have_To_Create_This_Class_But_Im_Not_Happy_About_It
+    {
+        private static string wtf;
+        private Establish context = () => wtf = "wouldn't a simple wtf=\"value\" be simpler?";
+        private Because of = () => wtf = "what's the point of the 'Because' method";
+        private It finally_a_test = () => wtf.ShouldEqual("what's the point of the 'Because' method");
+    }
+
+    [Subject("MSpec syntax sample")]
+    public class With_MSpec_Classes_are_the_new_regions
+    {
+        private static string wtf = "Do theses 8 things in this invented syntax and voila! Classic MSturbation.";
+        private It the_test = () => wtf.ShouldEqual("Do theses 8 things in this invented syntax and voila! Classic MSturbation.");
+    }
 }
